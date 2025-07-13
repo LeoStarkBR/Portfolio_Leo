@@ -1,0 +1,201 @@
+/* ------------------- */
+/* RESET E VARIÁVEIS (CONFIGURAÇÕES GLOBAIS) */
+/* ------------------- */
+:root {
+    /* TEMA ESCURO (PADRÃO) */
+    --cor-fundo: #0D0D0D;
+    --cor-fundo-card: #1A1A1A;
+    --cor-fundo-header: rgba(13, 13, 13, 0.8);
+    --cor-borda: rgba(255, 255, 255, 0.1);
+    --cor-texto-principal: #F5F5F7;
+    --cor-texto-secundario: #A1A1A6;
+    --cor-fundo-tag: #333;
+    --cor-destaque: #0071E3;
+    --cor-sombra-projeto: rgba(0,0,0,0.3);
+    --fonte-principal: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+body.light-mode {
+    /* TEMA CLARO */
+    --cor-fundo: #F5F5F7;
+    --cor-fundo-card: #FFFFFF;
+    --cor-fundo-header: rgba(245, 245, 247, 0.8);
+    --cor-borda: rgba(0, 0, 0, 0.1);
+    --cor-texto-principal: #1D1D1F;
+    --cor-texto-secundario: #6E6E73;
+    --cor-fundo-tag: #E8E8ED;
+    --cor-sombra-projeto: rgba(0,0,0,0.1);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto-principal);
+    font-family: var(--fonte-principal);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+section { padding: 100px 0; }
+h1, h2, h3 { font-weight: 700; color: var(--cor-texto-principal); transition: color 0.3s; }
+h2 { font-size: 2.5rem; text-align: center; margin-bottom: 60px; }
+p { line-height: 1.6; color: var(--cor-texto-secundario); transition: color 0.3s; }
+
+/* ------------------- */
+/* HEADER (CABEÇALHO) */
+/* ------------------- */
+header {
+    position: sticky; top: 0; width: 100%; z-index: 1000;
+    background-color: var(--cor-fundo-header);
+    backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--cor-borda);
+    transition: background-color 0.3s, border-bottom 0.3s;
+}
+.nav-container { display: flex; justify-content: space-between; align-items: center; height: 70px; }
+.logo { font-weight: 600; font-size: 1.2rem; color: var(--cor-texto-principal); text-decoration: none; }
+.nav-menu { display: flex; align-items: center; gap: 20px; }
+.nav-links a {
+    color: var(--cor-texto-secundario); text-decoration: none;
+    margin-left: 20px; font-weight: 500; transition: color 0.3s ease;
+}
+.nav-links a:hover { color: var(--cor-destaque); }
+.theme-toggle-btn {
+    background: none; border: none; color: var(--cor-texto-secundario);
+    font-size: 1.2rem; cursor: pointer; transition: color 0.3s ease, transform 0.3s ease;
+}
+.theme-toggle-btn:hover { color: var(--cor-destaque); transform: scale(1.1); }
+
+/* ------------------- */
+/* SEÇÃO HERO (APRESENTAÇÃO) */
+/* ------------------- */
+#hero { text-align: center; padding: 120px 0; }
+#hero h1 { font-size: 4rem; line-height: 1.1; margin-bottom: 20px; }
+#hero .highlight-text {
+    background: -webkit-linear-gradient(45deg, var(--cor-destaque), #64d1ff);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+#hero p { max-width: 600px; margin: 0 auto 30px auto; font-size: 1.2rem; }
+.hero-buttons .btn {
+    text-decoration: none; background-color: var(--cor-destaque);color: white ;padding: 12px 28px;
+    border-radius: 50px; font-weight: 600; margin: 0 10px;
+    transition: transform 0.2s ease; display: inline-block;
+}
+.hero-buttons .btn:hover { transform: scale(1.05); }
+.btn-primary { background-color: var(--cor-destaque); }
+.btn-secondary {
+    color: var(--cor-destaque); background-color: transparent;
+    border: 1px solid var(--cor-destaque);
+}
+
+.emoji {
+    margin-top: 20px; display: flex; justify-content: center;
+}
+.emoji-image {
+    width: 130px; height: 130px; border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+/* ------------------- */
+/* SEÇÃO SOBRE */
+/* ------------------- */
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: flex-start; }
+.about-card {
+    background: var(--cor-fundo-card); padding: 30px; border-radius: 18px;
+    border: 1px solid var(--cor-borda); transition: background-color 0.3s, border 0.3s;
+}
+.about-card .icon { font-size: 2rem; color: var(--cor-destaque); margin-bottom: 15px; }
+.about-card h3 { font-size: 1.5rem; margin-bottom: 10px; }
+.about-quote {
+    text-align: center; font-size: 1.2rem; margin-top: 60px;
+    font-style: italic; color: var(--cor-texto-principal); max-width: 800px; margin-left: auto; margin-right: auto;
+}
+
+/* ------------------- */
+/* SEÇÃO HABILIDADES */
+/* ------------------- */
+.skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+.skill-category {
+    background-color: var(--cor-fundo-card); padding: 25px; border-radius: 18px;
+    border: 1px solid var(--cor-borda); transition: background-color 0.3s, border 0.3s;
+}
+.skill-category h3 { font-size: 1.2rem; margin-bottom: 20px; color: var(--cor-destaque); }
+.skill-list { list-style: none; display: flex; flex-wrap: wrap; gap: 10px; }
+.skill-list li {
+    background-color: var(--cor-fundo-tag); color: var(--cor-texto-principal);
+    padding: 5px 12px; border-radius: 12px; font-size: 0.9rem; font-weight: 500;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* ------------------- */
+/* SEÇÃO PROJETOS */
+/* ------------------- */
+#projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+.project-card {
+    background: var(--cor-fundo-card); border-radius: 18px; overflow: hidden;
+    border: 1px solid var(--cor-borda);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s, border 0.3s;
+}
+.project-card:hover { transform: translateY(-10px); box-shadow: 0 20px 30px var(--cor-sombra-projeto); }
+.project-card img { width: 100%; height: 200px; object-fit: cover; background-color: #333; }
+.project-content { padding: 25px; }
+.project-content h3 { font-size: 1.3rem; margin-bottom: 10px; }
+.project-tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 15px 0; }
+.project-tags .tag {
+    background-color: var(--cor-destaque); color: white;
+    padding: 4px 10px; border-radius: 12px; font-size: 0.8rem; font-weight: 600;
+}
+.project-links a { text-decoration: none; color: var(--cor-destaque); font-weight: 600; margin-right: 20px; }
+.project-links a i { margin-right: 5px; }
+.project-links a:hover { text-decoration: underline; }
+
+/* ------------------- */
+/* SEÇÃO CONTATO */
+/* ------------------- */
+#contact { text-align: center; }
+#contact p { max-width: 500px; margin: 0 auto 40px auto; }
+.social-links a {
+    font-size: 2rem; color: var(--cor-texto-secundario); margin: 0 15px;
+    transition: color 0.3s, transform 0.3s;
+}
+.social-links a:hover { color: var(--cor-destaque); transform: scale(1.2); }
+
+/* ------------------- */
+/* FOOTER (RODAPÉ) */
+/* ------------------- */
+footer { text-align: center; padding: 20px 0; border-top: 1px solid var(--cor-borda); color: var(--cor-texto-secundario); }
+
+/* ------------------- */
+/* RESPONSIVIDADE */
+/* ------------------- */
+@media (max-width: 768px) {
+    h2 { font-size: 2rem; }
+    #hero h1 { font-size: 2.8rem; }
+    #hero p { font-size: 1rem; }
+    .nav-container { flex-direction: row; }
+    .nav-menu { gap: 15px; }
+    .nav-links a { margin-left: 15px; }
+    .about-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 480px) {
+    .nav-links { display: none; } /* Esconde os links em telas muito pequenas para simplicidade */
+}
+
+/* ======================================= */
+/* CORREÇÃO PARA O TEXTO DESTACADO NO MODO CLARO */
+/* ======================================= */
+
+body.light-mode #hero .highlight-text {
+    /* 1. Remove o fundo de gradiente */
+    background: none;
+    
+    /* 2. Reseta as propriedades que fazem o texto ser preenchido pelo fundo */
+    -webkit-background-clip: initial;
+    -webkit-text-fill-color: initial;
+    
+    /* 3. Aplica a cor de destaque (o azul forte), que tem ótimo contraste com o branco */
+    color: var(--cor-destaque);
+}

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leonardo Queiroz | Desenvolvedor Júnior</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- FONTES (Google Fonts) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- ÍCONES (Font Awesome) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <!-- ======================= -->
+    <!--     CABEÇALHO E NAVEGAÇÃO     -->
+    <!-- ======================= -->
+    <header>
+        <div class="container nav-container">
+            <a href="" class="logo"></a>
+            <div class="nav-menu">
+                <nav class="nav-links">
+                    <a href="#sobre">Sobre</a>
+                    <a href="#projetos">Projetos</a>
+                    <a href="#habilidades">Habilidades</a>
+                    <a href="#contact">Contato</a>
+                </nav>
+                <button id="theme-toggle" class="theme-toggle-btn" aria-label="Alternar tema">
+                    <!-- Ícone será inserido pelo JavaScript -->
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- ======================= -->
+        <!--     SEÇÃO HERO (INÍCIO)    -->
+        <!-- ======================= -->
+        <section id="hero">
+            <div class="container">
+                <h1>Desenvolvedor & Designer.
+                    <br><span class="highlight-text">Criando experiências com tecnologia.</span>
+                </h1>
+                <p>
+                    Transformo processos complexos em soluções web e de IA inteligentes, eficientes e escaláveis. Combinando vivência jurídico-administrativa e paixão por código para construir o futuro.
+                </p>
+                <div class="emoji">
+                  <a href="">
+                    <img src="me.png" alt="Emoji de Leonardo Queiroz estilizado" class="emoji-image">
+                  </a>
+                </div>
+                <div class="hero-buttons">
+                    <a href="#projetos" class="btn btn-primary">Ver Meus Projetos</a>
+                    <a href="#contact" class="btn btn-secondary">Entrar em Contato</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================= -->
+        <!--     SEÇÃO SOBRE MIM      -->
+        <!-- ======================= -->
+        <section id="sobre">
+            <div class="container">
+                <h2>Sobre Mim</h2>
+                <div class="about-grid">
+                    <div class="about-card">
+                        <div class="icon"><i class="fa-solid fa-scale-balanced"></i></div>
+                        <h3>Visão Jurídico-Administrativa</h3>
+                        <p>Atuo na gestão estratégica de processos, controle de produtividade e análise de performance na recuperação de créditos. Minha sólida vivência com dados processuais e auditoria me permite identificar oportunidades e maximizar resultados.</p>
+                    </div>
+                    <div class="about-card">
+                        <div class="icon"><i class="fa-solid fa-code"></i></div>
+                        <h3>Paixão por Desenvolvimento</h3>
+                        <p>Curso Ciência da Computação e desenvolvo aplicações web modernas com foco em interfaces funcionais (UX/UI). Exploro o poder da IA e automação (RPA) para criar soluções que otimizam fluxos de trabalho e geram insights.</p>
+                    </div>
+                </div>
+                <p class="about-quote">"Curioso por natureza e com sede de aprender, busco ser a ponte entre esses dois mundos, transformando problemas complexos em soluções acessíveis, inteligentes e escaláveis."</p>
+            </div>
+        </section>
+
+        <!-- ======================= -->
+        <!--     SEÇÃO HABILIDADES     -->
+        <!-- ======================= -->
+        <section id="habilidades">
+            <div class="container">
+                <h2>Tecnologias e Ferramentas</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Desenvolvimento Web</h3>
+                        <ul class="skill-list">
+                            <li>HTML5</li><li>CSS3</li><li>JavaScript</li><li>TypeScript</li><li>React</li><li>Vue.js</li><li>Next.js</li><li>Node.js</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Python, IA & Automação</h3>
+                        <ul class="skill-list">
+                            <li>Python</li><li>Pandas & NumPy</li><li>Flask & Django</li><li>TensorFlow</li><li>PyTorch</li><li>PyAutoGUI</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Ferramentas e Metodologias</h3>
+                        <ul class="skill-list">
+                            <li>Git</li><li>GitHub</li><li>Scrum</li><li>UX/UI Design</li><li>SQL</li><li>Figma</li><li>PostgreSQL</li><li>Banco de Dados</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ======================= -->
+        <!--      SEÇÃO PROJETOS     -->
+        <!-- ======================= -->
+        <section id="projetos">
+            <div class="container">
+                <h2>Projetos em Destaque</h2>
+                <div id="projects-grid"></div>
+            </div>
+        </section>
+
+        <!-- ======================= -->
+        <!--      SEÇÃO CONTATO      -->
+        <!-- ======================= -->
+        <section id="contact">
+            <div class="container">
+                <h2>Vamos construir algo juntos?</h2>
+                <p>Estou sempre aberto a novas oportunidades, colaborações e um bom bate-papo sobre tecnologia. Sinta-se à vontade para se conectar!</p>
+                <div class="social-links">
+                    <a href="mailto:lopesl484@gmail.com" target="_blank" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="https://www.linkedin.com/in/leonardo-gabriel-lopes-queiroz-0854b2195/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/LeoStarkBR" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ======================= -->
+    <!--        RODAPÉ           -->
+    <!-- ======================= -->
+    <footer>
+        <div class="container">
+            <p>© 2024 Leonardo Gabriel Lopes Queiroz. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
+</body>
+</html>
