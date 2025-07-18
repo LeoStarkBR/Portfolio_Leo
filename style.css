@@ -72,7 +72,13 @@ header {
 /* ------------------- */
 /* SEÇÃO HERO (APRESENTAÇÃO) */
 /* ------------------- */
-#hero { text-align: center; padding: 120px 0; }
+#hero {
+    text-align: center;
+    padding-top: calc(120px + env(safe-area-inset-top));
+    padding-bottom: 120px;
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+}
 #hero h1 { font-size: 4rem; line-height: 1.1; margin-bottom: 20px; }
 #hero .highlight-text {
     background: -webkit-linear-gradient(45deg, var(--cor-destaque), #64d1ff);
@@ -83,6 +89,12 @@ header {
     text-decoration: none; background-color: var(--cor-destaque);color: white ;padding: 12px 28px;
     border-radius: 50px; font-weight: 600; margin: 0 10px;
     transition: transform 0.2s ease; display: inline-block;
+}
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
 }
 .hero-buttons .btn:hover { transform: scale(1.05); }
 .btn-primary { background-color: var(--cor-destaque); }
